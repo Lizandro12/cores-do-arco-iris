@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    transition: all 0.8s;
+}
+
+h1{
+    font-size: 4em;
+    font-weight: 900;
+    border: solid 2px black;
+    padding: 14px;
+    border-radius: 50px;
+}
+
+h2{
+    font-size: 2.5em;
+    margin-top: 25px;
+}
+
+.cores p{
+    font-size: 4em;
+    margin-top: 30px;
+}
