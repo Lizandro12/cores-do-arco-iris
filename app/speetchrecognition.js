@@ -21,11 +21,11 @@ function onSpeak( event){
 };
 
 function printColors(color){
-    const paragraph = document.createElement("p");
-
-    paragraph.textContent = color;
-
-    elementColors.appendChild(paragraph);
+    elementColors.innerHTML = `
+    
+    <p >Você falou: </p>
+    <p class ="frase">${color}</p>
+    `
 };
 
 recognition.addEventListener("end", () => recognition.start());

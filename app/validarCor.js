@@ -11,41 +11,30 @@ function verifyColors(color){
 
 
     switch (color){
-        case raindowColors[0] : 
-        document.body.style.backgroundColor = "red";
-    }
+        case raindowColors[0]: 
 
-    case
+            document.body.style.backgroundColor = "red";
 
-    if(color == raindowColors[0]){
-        
-        console.log(`você falou ${color}`);
-        document.body.style.backgroundColor = "red";
+            break
+        case raindowColors[1]:
 
-    }else if(color == raindowColors[1]){
+            document.body.style.backgroundColor = "orange";
 
-        console.log(`você falou ${color}`);
-        document.body.style.backgroundColor = "orange";
-
-    }else if(color == raindowColors[2]){
-
-        console.log(`você falou ${color}`);
-        document.body.style.backgroundColor = "yellow";
-    }else if(color == raindowColors[3]){
-
-        document.body.style.backgroundColor = "green";
-    }else if(color == raindowColors[4]){
-
-        console.log(`você falou ${color}`);
-        document.body.style.backgroundColor = "blue";
-        console.log(`você falou ${color}`);
-    }else if(color == raindowColors[5]){
-
-        console.log(`você falou ${color}`);
-        document.body.style.backgroundColor = "indigo";
-    }else if(color == raindowColors[6]){
-
-        console.log(`você falou ${color}`);
-        document.body.style.backgroundColor = "violet";
-    }
+            break
+        case raindowColors[2]:
+            document.body.style.backgroundColor = "yellow";
+            break
+        case raindowColors[3]:
+            document.body.style.backgroundColor = "green";
+            break
+        case raindowColors[4]:
+            document.body.style.backgroundColor = "blue";
+            break
+        case raindowColors[5]:
+            document.body.style.backgroundColor = "indigo";
+            break
+        case raindowColors[6]:
+            document.body.style.backgroundColor = "violet";
+            break
+    };
 };
