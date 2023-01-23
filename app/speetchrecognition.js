@@ -1,4 +1,4 @@
-const elementoCores = document.querySelector("#cores");
+const elementColors = document.querySelector("#cores");
 
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
@@ -8,8 +8,20 @@ recognition.start();
 
 recognition.addEventListener("result", onSpeak);
 
-function onSpeak( event ){
-
-    console.log(event);
+function onSpeak( event){
+    const color = event.results[0][0].transcript;
+    const colorUpperCase = color.toUpperCase();
+    printColors(color);
+    verifyColors(color);
 
 };
+
+function printColors(color){
+    const paragraph = document.createElement("p");
+
+    paragraph.textContent = color;
+
+    elementColors.appendChild(paragraph);
+};
+
+recognition.addEventListener("end", () => recognition.start());
