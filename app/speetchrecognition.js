@@ -9,8 +9,12 @@ recognition.start();
 recognition.addEventListener("result", onSpeak);
 
 function onSpeak( event){
-    const color = event.results[0][0].transcript;
-    const colorUpperCase = color.toUpperCase();
+    const dataColor = event.results[0][0].transcript;
+
+    const color = dataColor.toUpperCase();
+/*     const upperCaseFirstLetter = dataColor[0].toUpperCase();
+    const upperCaseLastLetters = dataColor.langth -1; */
+
     printColors(color);
     verifyColors(color);
 

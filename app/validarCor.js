@@ -1,13 +1,21 @@
 function verifyColors(color){
     const raindowColors = [
-        'vermelho',
-        'laranja',
-        'Amarelo',
-        'Verde', 
-        'azul',
-        'anil',
-        'violeta'
+        'VERMELHO',
+        'LARANJA',
+        'AMARELO',
+        'VERDE', 
+        'AZUL',
+        'ANIL',
+        'VIOLETTA'
     ];
+
+
+    switch (color){
+        case raindowColors[0] : 
+        document.body.style.backgroundColor = "red";
+    }
+
+    case
 
     if(color == raindowColors[0]){
         
@@ -25,7 +33,19 @@ function verifyColors(color){
         document.body.style.backgroundColor = "yellow";
     }else if(color == raindowColors[3]){
 
-        console.log(`você falou ${color}`);
         document.body.style.backgroundColor = "green";
+    }else if(color == raindowColors[4]){
+
+        console.log(`você falou ${color}`);
+        document.body.style.backgroundColor = "blue";
+        console.log(`você falou ${color}`);
+    }else if(color == raindowColors[5]){
+
+        console.log(`você falou ${color}`);
+        document.body.style.backgroundColor = "indigo";
+    }else if(color == raindowColors[6]){
+
+        console.log(`você falou ${color}`);
+        document.body.style.backgroundColor = "violet";
     }
 };
