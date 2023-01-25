@@ -1,7 +1,7 @@
 
 const colorForValidate = [];
 
-const raindowColors = [
+const rainbowColors = [
     'VERMELHO',
     'LARANJA',
     'AMARELO',
@@ -12,41 +12,33 @@ const raindowColors = [
 ];
 
 function verifyColors(color){
-/* 
-    for (let i = 0; i < raindowColors.length; i++) {
-        const element = raindowColors[i];
-        
-        if(color != element){
-            console.log("Erro")
-        }
-        
-    } */
 
+
+     
     switch (color){
-        case raindowColors[0]: 
-            document.body.style.backgroundColor = "red";
-            break
-        case raindowColors[1]:
+        case rainbowColors[0]: 
+        document.body.style.backgroundColor = "red";
+        break
+        case rainbowColors[1]:
             document.body.style.backgroundColor = "orange";
             break
-        case raindowColors[2]:
+        case rainbowColors[2]:
             document.body.style.backgroundColor = "yellow";
             break
-        case raindowColors[3]:
+        case rainbowColors[3]:
             document.body.style.backgroundColor = "green";
             break
-        case raindowColors[4]:
+        case rainbowColors[4]:
             document.body.style.backgroundColor = "blue";
             break
-        case raindowColors[5]:
+        case rainbowColors[5]:
             document.body.style.backgroundColor = "indigo";
             break
-        case raindowColors[6]:
+        case rainbowColors[6]:
             document.body.style.backgroundColor = "violet";
     };
 
     colorForValidate.push(color);
 
     console.log(colorForValidate);
-
 };
