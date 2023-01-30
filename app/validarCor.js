@@ -65,6 +65,7 @@ function verifyColors(color){
                 break
         };
 
+
 /*     console.log(colorForValidate);
     console.log(colorForValodateLength);
 
@@ -74,6 +75,11 @@ function verifyColors(color){
 /* formARainbow(rainbowColorsLength, colorForValodateLength) */
 
 };
+
+/* const teste = colorForValidate.every(element => rainbowColors.includes(element));
+
+console.log(teste) */
+
 
 /* function formARainbow(rainbowColorsLength,colorForValidate){
     if(rainbowColorsLength == colorForValidate){
