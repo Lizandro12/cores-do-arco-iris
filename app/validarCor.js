@@ -66,9 +66,8 @@ function verifyColors(color){
         };
 
 
-/*     console.log(colorForValidate);
-    console.log(colorForValodateLength);
-
+     console.log(colorForValidate);
+/*
     console.log(rainbowColorsLength)
     console.log(rainbowColors.includes(colorForValidate)); */
     
