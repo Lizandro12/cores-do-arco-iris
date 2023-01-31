@@ -8,9 +8,6 @@ const rainbowColors = ['VERMELHO','LARANJA','AMARELO','VERDE','AZUL','TURQUESA',
 //FUNCAO QUE VERIFICA AS CORES
 function verifyColors(color){
 
-    const colorForValodateLength = colorForValidate.length
-    const rainbowColorsLength = rainbowColors.length
-
         switch (color){
             case rainbowColors[0]: 
                 if(!colorForValidate.includes(color)){
@@ -65,30 +62,21 @@ function verifyColors(color){
                 break
         };
 
-
-     console.log(colorForValidate);
-/*
-    console.log(rainbowColorsLength)
-    console.log(rainbowColors.includes(colorForValidate)); */
-    
-/* formARainbow(rainbowColorsLength, colorForValodateLength) */
-
 };
 
-/* const teste = colorForValidate.every(element => rainbowColors.includes(element));
+ const itContains = colorForValidate.every(element => rainbowColors.includes(element));
 
-console.log(teste) */
-
-
-/* function formARainbow(rainbowColorsLength,colorForValidate){
-    if(rainbowColorsLength == colorForValidate){
+ function formARainbow(){
+    if(itContains){
         document.body.classList.add("activo");
     }
-} */
+}
 
 document.body.addEventListener("click", (e)=>{
     if (e.target.id === "jogar-novamente") {
         window.location.reload();
         
     }
-})
+});
+
+console.log(rainbowColors, rainbowColors.length)
