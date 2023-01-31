@@ -1,45 +1,45 @@
- 
-//ARRAY QUE RECEBE AS CORES FALADAS PARA POSTERIOR VALIDAÇÃO
-const colorForValidate = [];
 
 //ARAY USADO PARA VERIFICAR SE AS CORES FALADAS PERTENSEM AO ARCO IRISS
-const rainbowColors = ['VERMELHO','LARANJA','AMARELO','VERDE','AZUL','TURQUESA','VIOLETTA',];
+const rainbowColors = ['AMARELO','AZUL','LARANJA','TURQUESA','VERDE','VERMELHO','VIOLETTA',];
+
+//ARRAY QUE RECEBE AS CORES FALADAS PARA POSTERIOR VALIDAÇÃO
+const colorForValidate = [];
 
 //FUNCAO QUE VERIFICA AS CORES
 function verifyColors(color){
 
         switch (color){
-            case rainbowColors[0]: 
+            case rainbowColors[5]: 
                 if(!colorForValidate.includes(color)){
                     document.body.style.backgroundColor = "red";
                     colorForValidate.push(color);
                 }
                 break
-            case rainbowColors[1]:
+            case rainbowColors[2]:
                 if(!colorForValidate.includes(color)){
                     document.body.style.backgroundColor = "orange";
                     colorForValidate.push(color);
                 }
                 break
-             case rainbowColors[2]:
+             case rainbowColors[0]:
                 if(!colorForValidate.includes(color)){
                     document.body.style.backgroundColor = "yellow";
                     colorForValidate.push(color);
                 }
                 break
-            case rainbowColors[3]:
+            case rainbowColors[4]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "green";
                     colorForValidate.push(color);   
                 }
                 break
-            case rainbowColors[4]:
+            case rainbowColors[1]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "blue";
                     colorForValidate.push(color);   
                 }
                 break
-            case rainbowColors[5]:
+            case rainbowColors[3]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "indigo";
                     colorForValidate.push(color);   
@@ -61,16 +61,19 @@ function verifyColors(color){
                 document.body.style.color = "#ffff";
                 break
         };
+        console.log(colorForValidate);
 
+        formARainbow();
 };
 
-/*   const itContains = colorForValidate.every(element => rainbowColors.includes(element));
+function formARainbow(){
 
- function formARainbow(){
-    if(itContains){
+    colorForValidate.sort;
+
+    if(rainbowColors.length === colorForValidate.length){
         document.body.classList.add("activo");
     }
-} */
+}
 
 document.body.addEventListener("click", (e)=>{
     if (e.target.id === "jogar-novamente") {
