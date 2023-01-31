@@ -1,4 +1,4 @@
-
+ 
 //ARRAY QUE RECEBE AS CORES FALADAS PARA POSTERIOR VALIDAÇÃO
 const colorForValidate = [];
 
@@ -54,7 +54,7 @@ function verifyColors(color){
             default: 
                 document.body.style.backgroundColor = "black";
                 document.body.innerHTML = `
-                <h2>Upps você acertou ${colorForValodateLength} cores</h2>
+                <h2>Upps você acertou cores</h2>
                 <h3>Por favor, pressione o botão para recomeçar</h3>
                 <button id ="jogar-novamente" class ="btn-jogar">Jogar Novamente</button>
                 `;
@@ -64,13 +64,13 @@ function verifyColors(color){
 
 };
 
- const itContains = colorForValidate.every(element => rainbowColors.includes(element));
+/*   const itContains = colorForValidate.every(element => rainbowColors.includes(element));
 
  function formARainbow(){
     if(itContains){
         document.body.classList.add("activo");
     }
-}
+} */
 
 document.body.addEventListener("click", (e)=>{
     if (e.target.id === "jogar-novamente") {
@@ -78,5 +78,3 @@ document.body.addEventListener("click", (e)=>{
         
     }
 });
-
-console.log(rainbowColors, rainbowColors.length)
