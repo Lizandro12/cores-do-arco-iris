@@ -5,6 +5,8 @@ const rainbowColors = ['AMARELO','AZUL','LARANJA','TURQUESA','VERDE','VERMELHO',
 //ARRAY QUE RECEBE AS CORES FALADAS PARA POSTERIOR VALIDAÇÃO
 const colorForValidate = [];
 
+let countColors = 0;
+
 //FUNCAO QUE VERIFICA AS CORES
 function verifyColors(color){
 
@@ -13,65 +15,80 @@ function verifyColors(color){
                 if(!colorForValidate.includes(color)){
                     document.body.style.backgroundColor = "red";
                     colorForValidate.push(color);
+                    countColors += 1;
                 }
                 break
             case rainbowColors[2]:
                 if(!colorForValidate.includes(color)){
                     document.body.style.backgroundColor = "orange";
                     colorForValidate.push(color);
+                    countColors += 1;
                 }
                 break
              case rainbowColors[0]:
                 if(!colorForValidate.includes(color)){
                     document.body.style.backgroundColor = "yellow";
                     colorForValidate.push(color);
+                    countColors += 1;
                 }
                 break
             case rainbowColors[4]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "green";
-                    colorForValidate.push(color);   
+                    colorForValidate.push(color); 
+                    countColors += 1;
                 }
                 break
             case rainbowColors[1]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "blue";
-                    colorForValidate.push(color);   
+                    colorForValidate.push(color);  
+                    countColors += 1;
                 }
                 break
             case rainbowColors[3]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "indigo";
-                    colorForValidate.push(color);   
+                    colorForValidate.push(color);  
+                    countColors += 1;
                 }
                 break
             case rainbowColors[6]:
                 if (!colorForValidate.includes(color)) {
                     document.body.style.backgroundColor = "violet";
-                    colorForValidate.push(color);   
+                    colorForValidate.push(color);
+                    countColors += 1;
                 } 
                 break
             default: 
                 document.body.style.backgroundColor = "black";
                 document.body.innerHTML = `
-                <h2>Upps você acertou cores</h2>
+                <h2>Upps você acertou apenas ${countColors} cores</h2>
                 <h3>Por favor, pressione o botão para recomeçar</h3>
                 <button id ="jogar-novamente" class ="btn-jogar">Jogar Novamente</button>
                 `;
                 document.body.style.color = "#ffff";
+
+/*                 if(document.body.style.backgroundColor = "black") {
+                    window.location.reload();
+                } */
                 break
         };
-        console.log(colorForValidate);
-
         formARainbow();
 };
 
 function formARainbow(){
 
-    colorForValidate.sort;
-
     if(rainbowColors.length === colorForValidate.length){
         document.body.classList.add("activo");
+
+        document.body.innerHTML = `
+        <h2>Parabém você formou um Arco-Iris</h2>
+        <h3>Por favor, pressione o botão para recomeçar</h3>
+        <button id ="jogar-novamente" class ="btn-jogar">Jogar Novamente</button>`;
+
+        document.body.style.color = "black";
+
     }
 }
 
