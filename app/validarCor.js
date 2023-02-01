@@ -63,15 +63,14 @@ function verifyColors(color){
             default: 
                 document.body.style.backgroundColor = "black";
                 document.body.innerHTML = `
-                <h2>Upps você acertou apenas ${countColors} cores</h2>
-                <h3>Por favor, pressione o botão para recomeçar</h3>
-                <button id ="jogar-novamente" class ="btn-jogar">Jogar Novamente</button>
-                `;
-                document.body.style.color = "#ffff";
+                    <h2>Upps você acertou apenas ${countColors} cores</h2>
+                    <h3>Aguarde para recomeçar</h3>
+                    `;
+                    document.body.style.color = "#ffff";
 
-/*                 if(document.body.style.backgroundColor = "black") {
-                    window.location.reload();
-                } */
+                    setTimeout(()=>{
+                        window.location.reload();  
+                    }, 4000)
                 break
         };
         formARainbow();
@@ -80,21 +79,22 @@ function verifyColors(color){
 function formARainbow(){
 
     if(rainbowColors.length === colorForValidate.length){
-        document.body.classList.add("activo");
+        setTimeout(()=>{
 
-        document.body.innerHTML = `
-        <h2>Parabém você formou um Arco-Iris</h2>
-        <h3>Por favor, pressione o botão para recomeçar</h3>
-        <button id ="jogar-novamente" class ="btn-jogar">Jogar Novamente</button>`;
+            document.body.classList.add("activo");
+            document.body.innerHTML = `
+            <h2>Parabéns você formou um Arco-Iris</h2>
+            <h3>Por favor, pressione o botão para recomeçar</h3>
+            <button id ="jogar-novamente" class ="btn-jogar">Jogar Novamente</button>`;
 
-        document.body.style.color = "black";
+            document.body.style.color = "black";
+        }, 2000);
 
     }
 }
 
 document.body.addEventListener("click", (e)=>{
     if (e.target.id === "jogar-novamente") {
-        window.location.reload();
-        
+            window.location.reload();
     }
 });
