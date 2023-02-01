@@ -70,7 +70,7 @@ function verifyColors(color){
 
                     setTimeout(()=>{
                         window.location.reload();  
-                    }, 4000)
+                    }, 3000)
                 break
         };
         formARainbow();
