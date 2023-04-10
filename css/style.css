@@ -9,6 +9,9 @@ body{
     margin: 0;
     text-align: center;
     transition: all 0.8s;
+    background-image: url(../2399903-multietnico-criancas-brincando-no-arco-iris-vetor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
